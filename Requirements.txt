@@ -1,0 +1,14 @@
+tqdm
+loguru
+tqdm
+text_generation
+vllm==0.6.3.post1
+numpy==1.23.3
+angr==9.2.102
+transformers==4.46.1
+torch==2.4.0
+capstone==5.0.0.post1
+openai==1.52.2
+networkx==2.5.1
+clang==10.0.1
+libclang==10.0.1.0
