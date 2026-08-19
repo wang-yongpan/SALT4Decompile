@@ -1,5 +1,5 @@
 # SALT4Decompile
-The code and dataset of SALT4Decompile, the paper title is "SALT4Decompile: Inferring Source-level Abstract Logic Tree for
+The code and dataset of SALT4Decompile, the paper title is "SALT4Decompile: Inferring Source-aligned Abstract Loop Tree for
 LLM-Based Binary Decompilation."
 
 # Requirements
