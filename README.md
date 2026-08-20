@@ -1,5 +1,5 @@
-# SALT4Decompile
-The code and dataset of SALT4Decompile, the paper title is "SALT4Decompile: Inferring Source-aligned Abstract Loop Tree for
+# ALT4Decompile
+The code and dataset of ALT4Decompile, the paper title is "ALT4Decompile: Inferring C-aligned Abstract Loop Tree for
 LLM-Based Binary Decompilation."
 
 # Requirements
@@ -23,9 +23,9 @@ You can download the related files from the data folder. When the execution of t
 The results of each optimization option are saved in the path (DecompileEval_results_each_options.json).
 
 
-In addition, you can use the trained model (SALT4EXE, we have released the models of two-parameter scales, [1.3B](https://drive.google.com/file/d/1hI_yJKHPx1A--wTxA_eymC0TVtU7IIPh/view?usp=sharing) and [6.7B](https://drive.google.com/file/d/1FeUj-ZjeHKh1X3Wb2AW-f7_ItYfDB4Kk/view?usp=sharing)) to generate our draft code and run the draft_code_optimization.py script including the two fixers and symbolic information restorer to optimize the draft code. 
+In addition, you can use the trained model (ALT4EXE, we have released the models of two-parameter scales, [1.3B](https://drive.google.com/file/d/1hI_yJKHPx1A--wTxA_eymC0TVtU7IIPh/view?usp=sharing) and [6.7B](https://drive.google.com/file/d/1FeUj-ZjeHKh1X3Wb2AW-f7_ItYfDB4Kk/view?usp=sharing)) to generate our draft code and run the draft_code_optimization.py script including the two fixers and symbolic information restorer to optimize the draft code. 
 
-Please note that you will need a GPU to run our SALT4EXE model. DecompileEval_path including the DecompileEval test dataset with our SALT, which can be extracted through the extract_salt_from_dataset.py script.
+Please note that you will need a GPU to run our ALT4EXE model. DecompileEval_path including the DecompileEval test dataset with our ALT, which can be extracted through the extract_salt_from_dataset.py script.
 ```python
 python generate_draft_code.py model_path DecompileEval_path save_path
 ```
@@ -34,12 +34,12 @@ Please note that you will need an OPENAI API token to run our draft_code_optimiz
 python draft_code_optimization.py -p xx/SALT4EXE_output.json -o xx/output_path -s xx/final_result_save_path
 ```
 
-# SALT4EXE Model Training
+# ALT4EXE Model Training
 You can extract the SFT dataset from the EXEBENCH dataset[^1] and construct the DecompileEval test dataset from the following scripts:
 ```python
 python extract_salt_from_dataset.py -p xx/base_path -n your_save_name -h xx/DecompileEval_path
 ```
-If you want to retrain the SALT4EXE model, you can use the SFT dataset or download our SFT dataset on the link (we will release it later). You can run the fine-tuning script as the following command:
+If you want to retrain the ALT4EXE model, you can use the SFT dataset or download our SFT dataset on the link (we will release it later). You can run the fine-tuning script as the following command:
 ```shell
 nohup bash run_finetune_SALT4EXE.sh > logs/train.log 2>&1 &
 ```
