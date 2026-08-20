@@ -52,9 +52,5 @@ python add_code2TCP.py # after modifying your path settings
 Maybe you need to modify some path settings to run it.
 
 
-# Prompt templates
-
-![prompt.png](prompt.png)`
-
 # Reference
 [^1]: Jordi Armengol-Estapé, Jackson Woodruff, Alexander Brauckmann, José Wesley de Souza Magalhães, and Michael F. P. O’Boyle. 2022. Exebench: An ml-scale dataset of executable c functions. In Proceedings of the 6th ACM SIGPLAN International Symposium on Machine Programming, MAPS 2022, page 50–59, New York, NY, USA. Association for Computing Machinery.
